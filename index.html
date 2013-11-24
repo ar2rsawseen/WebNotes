@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" href="./css/style.css" media="screen"/>
+	<link rel="stylesheet" href="./css/print.css" media="print"/>
+	<link rel="shortcut icon" href="./images/notes.png">
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9806969-54', 'waterbreadinternet.com');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+	<div id='notesToolbar'>
+		<ul>
+			<li><button id='notesAdd'><i class='notesIcon'></i><span>Add</span><i class='notesDown'></i></button>
+				<ul id='notesSubAdd'>
+					<li id='notesSubAddNote'><i class='notesIcon notesAddIcon'></i>New Note</li>
+					<li id='notesSubAddFolder'><i class='notesIcon notesAddIcon'></i>New Folder</li>
+					<li id='notesSubAddSeparator'><i class='notesIcon'></i>New Separator</li>
+				</ul>
+			</li>
+			<li><button id='notesSend'><i class='notesIcon'></i>Send</button></li>
+			<li><button id='notesPrint'><i class='notesIcon'></i>Print</button></li>
+			<li><button id='notesDelete'><i class='notesIcon'></i>Delete</button></li>
+			<li><button id='notesImport'><i class='notesIcon'></i>Import</button></li>
+			<li><a id='notesExport' target='_blank' download="notes_exported.txt"><i class='notesIcon'></i>Export</a></li>
+			<!--<li><button id='notesSync'><i class='notesIcon'></i>Enable Syncing</button></li>-->
+			<li>
+				<span class='inputLabel'>Font:</span> <input list="fonts" id='notesFont' class='notesInput'>
+				<datalist id="fonts">
+					<option value="Arial">
+					<option value="Arial Black">
+					<option value="Avant Garde">
+					<option value="Bookman">
+					<option value="Comic Sans MS">
+					<option value="Courier">
+					<option value="Courier New">
+					<option value="Garamond">
+					<option value="Georgia">
+					<option value="Helvetica">
+					<option value="Impact">
+					<option value="Palatino">
+					<option value="Times">
+					<option value="Times New Roman">
+					<option value="Trebuchet MS">
+					<option value="Verdana">
+				</datalist>
+			</li>
+			<li>
+				<span class='inputLabel'>Size:</span> <input id='notesSize' class='notesInput' size='2'>
+			</li>
+		</ul>
+		<input type='search' id='notesSearch' class='notesInput' placeholder='Quick find'/>
+	</div>
+	<div id='notesTreeHolder'>
+		<div id='notesSorter'>
+		<ul>
+			<li id='sortDate'><i></i>Date</li>
+			<li id='sortName'><i></i>Name</li>
+			<li id='sortOrder'><i></i>My Order</li>
+		</ul>
+		</div>
+		<div id='notesTree'>
+		</div>
+	</div>
+	<div id='notesResizer'></div>
+	<div id='notesContentHolder'>
+		<textarea id='notesContent'></textarea>
+	</div>
+	<script type="text/javascript" src="./js/notesScript.js"></script>
+</body>
+</html>
