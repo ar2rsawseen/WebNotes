@@ -13,7 +13,7 @@
 	<li>Print notes</li>
 	<li>Change font</li>
 	<li>Change font size</li>
-	<li>Use tabs in notes texts</li>
+	<li>Use Tab in notes texts</li>
 	<li>Import and Export notes</li>
 </ul>
 </p>
